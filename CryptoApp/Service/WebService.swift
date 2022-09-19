@@ -14,10 +14,7 @@ class WebService{
                 
                 do{
                     let dataChecked = try? JSONDecoder().decode([CryptoCurrency].self, from: data)
-                    print(dataChecked)
                     completion(dataChecked)
-                }catch{
-                    print("Error")
                 }
             }
         }.resume()
